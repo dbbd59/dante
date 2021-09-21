@@ -1,6 +1,7 @@
 name: dante
-description: A new Flutter package project.
+description: a simple logger for your flutter apps, inspired by the best poetrydartdoc Dante
 version: 0.0.1
+homepage: https://github.com/dbbd59/dante
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
