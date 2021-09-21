@@ -1,39 +1,36 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# DANTE
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+[![style: ficcanaso](https://img.shields.io/badge/style-ficcanaso-yellow)](https://github.com/dbbd59/ficcanaso)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+## Introduction
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+> a simple logger for your flutter apps, inspired by the best poetry: Dante
 
-## Features
+## Install
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```yaml
+dev_dependencies:
+    loggy: ^0.0.1
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+import 'package:dante/dante.dart';
+
+Dante.info('Lorem ipsum dolor sit amet');
+📜 🖋  🍀 Dante.I  ⏰ 2021-09-21 21:01:56.302863
+      Lorem ipsum dolor sit amet
+
+Dante.debug('consectetur adipiscing elit');
+📜 🖋  🍀 Dante.D  ⏰ 2021-09-21 21:01:56.317250
+      consectetur adipiscing elit
+
+Dante.warning('sed do eiusmod tempor incididunt');
+📜 🖋  🍀 Dante.W  ⏰ 2021-09-21 21:01:56.317566
+      sed do eiusmod tempor incididunt
+
+Dante.error('ut labore et dolore magna aliqua');
+📜 🖋  🍀 Dante.E  ⏰ 2021-09-21 21:01:56.317876
+      ut labore et dolore magna aliqua
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
