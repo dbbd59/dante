@@ -1,4 +1,4 @@
-// ignore_for_file: aString?_print, unnecessary_string_escapes, avoid_print
+// ignore_for_file: avoid_print
 
 import 'dart:convert';
 
@@ -13,43 +13,43 @@ class Dante {
   static String? e(Object message, [Object? e, StackTrace? stackTrace]) =>
       error(message, e, stackTrace);
   static String? error(Object message, [Object? e, StackTrace? stackTrace]) =>
-      log(
+      _log(
         message,
         error: e,
         stackTrace: stackTrace,
-        level: LogLevel.error,
+        level: _LogLevel.error,
       );
 
   static String? w(Object message) => warning(message);
-  static String? warning(Object message) => log(
+  static String? warning(Object message) => _log(
         message,
-        level: LogLevel.warning,
+        level: _LogLevel.warning,
       );
 
   static String? i(Object message) => info(message);
-  static String? info(Object message) => log(
+  static String? info(Object message) => _log(
         message,
-        level: LogLevel.info,
+        level: _LogLevel.info,
       );
 
   static String? d(Object message) => debug(message);
-  static String? debug(Object message) => log(
+  static String? debug(Object message) => _log(
         message,
-        level: LogLevel.debug,
+        level: _LogLevel.debug,
       );
 
-  static String? log(
+  static String? _log(
     Object message, {
-    required LogLevel level,
+    required _LogLevel level,
     Object? error,
     StackTrace? stackTrace,
   }) {
     if (kDebugMode) {
-      final ansiColor = AnsiColor.map[level.toString()];
-      const ansiColorReset = AnsiColor.reset;
+      final ansiColor = _AnsiColor.map[level.toString()];
+      const ansiColorReset = _AnsiColor.reset;
 
       final logLevel =
-          '${AnsiColor.white}🍀 Dante.${level.toString().split('.').last[0].toUpperCase()}';
+          '${_AnsiColor.white}🍀 Dante.${level.toString().split('.').last[0].toUpperCase()}';
 
       final time = dateTime ?? DateTime.now().toString();
 
@@ -72,14 +72,14 @@ class Dante {
   }
 }
 
-enum LogLevel {
+enum _LogLevel {
   debug,
   error,
   info,
   warning,
 }
 
-class AnsiColor {
+class _AnsiColor {
   static const map = {
     'LogLevel.info': green,
     'LogLevel.error': red,
