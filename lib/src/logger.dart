@@ -81,10 +81,10 @@ enum _LogLevel {
 
 class _AnsiColor {
   static const map = {
-    'LogLevel.info': green,
-    'LogLevel.error': red,
-    'LogLevel.debug': cyan,
-    'LogLevel.warning': yellow,
+    '_LogLevel.info': green,
+    '_LogLevel.error': red,
+    '_LogLevel.debug': cyan,
+    '_LogLevel.warning': yellow,
   };
 
   static const cyan = '\x1B[36m';
