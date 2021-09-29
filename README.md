@@ -10,7 +10,7 @@
 
 ```yaml
 dev_dependencies:
-    loggy: ^0.0.1
+    dante: ^0.0.2
 ```
 
 ## Usage
