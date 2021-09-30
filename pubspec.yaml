@@ -1,6 +1,6 @@
 name: dante
 description: a simple logger for your flutter apps, inspired by the best poetrydartdoc Dante
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/dbbd59/dante
 
 environment:

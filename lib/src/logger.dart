@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'dart:convert';
-import 'dart:io';
+import 'dart:io' if (dart.library.html) 'dart:html';
 
 import 'package:flutter/foundation.dart';
 
@@ -46,12 +46,11 @@ class Dante {
     StackTrace? stackTrace,
   }) {
     if (kDebugMode) {
-      final ansiColor =
-          Platform.isAndroid ? _AnsiColor.map[level.toString()] : '';
-      final ansiColorReset = Platform.isAndroid ? _AnsiColor.reset : '';
+      final ansiColor = colorEnable ? _AnsiColor.map[level.toString()] : '';
+      final ansiColorReset = colorEnable ? _AnsiColor.reset : '';
 
       final logLevel =
-          '${Platform.isAndroid ? _AnsiColor.white : ''}🍀 Dante.${level.toString().split('.').last[0].toUpperCase()}';
+          '${colorEnable ? _AnsiColor.white : ''}🍀 Dante.${level.toString().split('.').last[0].toUpperCase()}';
 
       final time = dateTime ?? DateTime.now().toString();
 
@@ -72,6 +71,8 @@ class Dante {
       return logContent;
     }
   }
+
+  static bool get colorEnable => !kIsWeb || Platform.isAndroid;
 }
 
 enum _LogLevel {
