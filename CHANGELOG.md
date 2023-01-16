@@ -1,3 +1,8 @@
+
+# 1.0.0
+
+* updates
+
 # 0.0.4
 
 * removes color on web

@@ -66,10 +66,13 @@ class Dante {
       }
       final logValue =
           '$logHeader     $ansiColor $logContent\n $ansiColorReset';
-      if (!test) print(logValue);
+      if (!test) {
+        print(logValue);
+      }
 
       return logContent;
     }
+    return null;
   }
 
   static bool get _colorEnabled {

@@ -1,16 +1,16 @@
 name: dante
 description: a simple logger for your flutter apps, inspired by the best poetrydartdoc Dante
-version: 0.0.4
+version: 1.0.0
 homepage: https://github.com/dbbd59/dante
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=2.18.6 <3.0.0"
+  flutter: ">=3.3.10"
 
 dependencies:
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  ficcanaso: ^2.0.7
-  test: ^1.17.12
+  ficcanaso: ^5.0.0
+  test: ^1.22.2
