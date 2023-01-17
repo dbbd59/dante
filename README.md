@@ -4,13 +4,13 @@
 
 ## Introduction
 
-> a simple logger for your flutter apps, inspired by the best poetry: Dante
+> Dante is a logging utility for Dart and Flutter projects. It includes methods for logging errors, warnings, debug messages, and information messages. It also supports color-coding of log messages based on the log level, inspired by the best poetry: Dante
 
 ## Install
 
 ```yaml
-dev_dependencies:
-    dante: ^0.0.4
+dependencies:
+    dante:
 ```
 
 ## Usage
@@ -34,3 +34,18 @@ Dante.error('ut labore et dolore magna aliqua');
 📜 🖋  🍀 Dante.E  ⏰ 2021-09-21 21:01:56.317876
       ut labore et dolore magna aliqua
 ```
+
+## Methods
+The following methods are provided for logging various levels of messages:
+- `Dante.e(message, [error, stackTrace])` or `Dante.error(message, [error, stackTrace])` for logging errors
+- `Dante.w(message)` or `Dante.warning(message)` for logging warnings
+- `Dante.i(message)` or `Dante.info(message)` for logging informational messages
+- `Dante.d(message)` or `Dante.debug(message)` for logging debug messages
+
+### Color-Coding
+Dante supports color-coding of log messages based on the log level. This feature is only enabled on Android platforms.
+
+### Testing
+Dante includes a `test` variable that can be set to `true` to prevent the log messages from being printed to the console. This can be useful when writing test cases for your application.
+
+
